@@ -58,7 +58,7 @@ namespace PruebaPostgresql
             string idGuion = textBox5.Text;
             string idEstudio = textBox6.Text;
             int idAnime = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
-            consulta = "UPDATE Anime SET Ubicacion = '" + FechaInicio + "'Numero = '" + Nombre + "',Tipo = '" + FechaFinalizacion + "',idGeneracion = '" + idGeneracion + "' ,idGuion = '" + idGuion + "',idEstudio = '" + idEstudio + "' WHERE idAnime = " + idAnime.ToString();
+            consulta = "UPDATE Anime SET FechaInicio = '" + FechaInicio + "'Nombre = '" + Nombre + "',FechaFinalizacion = '" + FechaFinalizacion + "',idGeneracion = '" + idGeneracion + "' ,idGuion = '" + idGuion + "',idEstudio = '" + idEstudio + "' WHERE idAnime = " + idAnime.ToString();
             ConexionPostgresql.ejecutaConsulta(consulta);
             MostrarDatos();
 
